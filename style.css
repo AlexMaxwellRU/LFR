@@ -1,0 +1,247 @@
+  
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        .season-section {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .season-title {
+            font-size: 1.8em;
+            color: #3498db;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .season-title::before {
+            content: "❄️";
+            font-size: 1.2em;
+        }
+        
+        .spring::before { content: "🌸"; }
+        .summer::before { content: "☀️"; }
+        .autumn::before { content: "🍂"; }
+        
+        .poem-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(248, 250, 252, 0.9);
+            border-radius: 12px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.2s ease;
+        }
+        
+        .poem-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .poem-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .poem-author {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.4em;
+            min-width: 200px;
+        }
+        
+        .poem-title {
+            color: #3055a7;
+            font-weight: bold;
+            font-size: 1.4em;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .poem-link {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.9em;
+            padding: 8px 16px;
+            border: 1px solid #3498db;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .poem-link:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        details {
+            margin-top: 15px;
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #80aae0 100%);
+            color: white;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            list-style: none;
+        }
+        
+        summary:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: translateY(-2px);
+        }
+        
+        .poem-text {
+            padding: 25px;
+            background: white;
+            border-radius: 0 0 8px 8px;
+            margin-top: 5px;
+            border: 1px solid #e1e8ed;
+            white-space: pre-wrap;
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #2c3e50;
+            max-height: 500px;
+            overflow-y: auto;
+            font-family: 'Georgia', serif;
+        }
+        
+        .error-text {
+            color: #e74c3c;
+            font-style: italic;
+            background: #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+        }
+        
+@media (max-width: 768px) {
+    .container {
+        max-width: none !important;
+        width: 100% !important;
+        padding: 10px 5px !important;
+        margin: 0 !important;
+    }
+    
+    .season-section {
+        max-width: none !important;
+        width: auto !important;
+        margin: 0 5px 20px 5px !important;
+        padding: 15px 10px !important;
+        border-radius: 8px !important;
+    }
+    
+    .header {
+        max-width: none !important;
+        width: auto !important;
+        margin: 0 5px 20px 5px !important;
+        padding: 20px 10px !important;
+    }
+    
+    .header h1 {
+        font-size: 1.8em !important;
+    }
+    
+    .header p {
+        font-size: 1em !important;
+    }
+    
+    .season-title {
+        font-size: 1.4em !important;
+    }
+    
+    .poem-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+    
+    .poem-author {
+        min-width: auto !important;
+        font-size: 1.1em !important;
+        width: 100% !important;
+    }
+    
+    .poem-title {
+        text-align: left !important;
+        font-size: 1.1em !important;
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+    
+    .poem-item {
+        padding: 15px !important;
+    }
+    
+    .poem-text {
+        padding: 15px !important;
+        font-size: 1em !important;
+        max-height: none !important;
+    }
+    
+    .footer {
+        margin: 0 5px !important;
+        padding: 20px 10px !important;
+    }
+}
